@@ -1,0 +1,41 @@
+<div class="glass-container">
+    <div class="form-side">
+        <h2 class="page-header">Customer Management</h2>
+        <form>
+            <div class="form-group">
+                <label for="name" class="form-label">Customer Name</label>
+                <input [(ngModel)]="customer.name" name="name"  type="text" class="form-control" style="margin-left: 15px;" placeholder="Enter customer name" >
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="form-label">Age</label>
+                <input  [(ngModel)]="customer.age" name="age" type="text" style="margin-left: 110px;" class="form-control"  placeholder="Enter Age" >
+            </div>
+
+            <div class="form-group">
+                <label for="salary" class="form-label">City</label>
+                <input [(ngModel)]="customer.city" name="city" type="text" style="margin-left: 110px;" class="form-control"  placeholder="Enter city" >
+            </div>
+
+            <div class="btn-container">
+                <button type="button" class="btn-custom btn-add" (click)="addCustomer()">Add Customer</button>
+
+            </div>
+        </form>
+    </div>
+    <div class="image-side"></div>
+</div>
+
+<button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>

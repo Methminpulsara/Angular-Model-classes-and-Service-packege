@@ -1,0 +1,37 @@
+
+<div class="bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 min-h-screen">
+    <!-- Dashboard Container -->
+    <div class="flex min-h-screen">
+        <!-- Glass Sidebar -->
+        <aside class="w-64 bg-black/30 backdrop-blur-lg border-r border-white/10 p-6 fixed h-full">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 bg-purple-500 rounded-lg"></div>
+                <h1 routerLink="/dashboard/dash" class="text-white text-xl font-bold">Dashboard</h1>
+            </div>
+
+            <nav class="space-y-2">
+                <button routerLink="/dashboard/addcustomer" class="flex items-center gap-3 p-3 text-white/80 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    Add Customer
+                </button>
+                <button routerLink="/dashboard/edit" class="flex items-center gap-3 p-3 text-white/80 hover:bg-white/10 rounded-lg transition-all">
+                  <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                  </svg>
+                  Manege Customer
+              </button>
+
+                <!-- Add more menu items -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+
+            <router-outlet></router-outlet>
+
+        </main>
+    </div>
+

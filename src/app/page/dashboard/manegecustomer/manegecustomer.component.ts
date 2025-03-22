@@ -40,8 +40,6 @@ export class ManegecustomerComponent {
     })
   }
 
-
-
  searchCustomer(){
   this.customerService.searchCustomer(this.name).subscribe((data)=>{
       this.customerList=[data];
@@ -55,18 +53,6 @@ export class ManegecustomerComponent {
  }
 
 }
-
-
-
-
-
-
-
-
-
-  // updatecustomer (){
-
-  // }
 
 
 

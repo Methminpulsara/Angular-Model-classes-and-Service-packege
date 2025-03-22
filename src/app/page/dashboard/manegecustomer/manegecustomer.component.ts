@@ -15,6 +15,7 @@ export class ManegecustomerComponent {
 
 
   public id: number = 0;
+  public name:string="";
 
   customerList:Customer[]=[];
 
@@ -39,14 +40,25 @@ export class ManegecustomerComponent {
     })
   }
 
+
+
+ searchCustomer(){
+  this.customerService.searchCustomer(this.name).subscribe((data)=>{
+      this.customerList=[data];
+  })
+ }
+
+ updatecustomer(customer:Customer){
+  this.customerService.updateCustomer(customer).subscribe((data)=>{
+    this.loadCustomer();
+  })
+ }
+
 }
 
 
-  // serchCustomer(){
-  //   this.http.get("http://localhost:8080/customer/search/"+this.id).subscribe((data=>{
-  //     this.customerList= Array.isArray(data) ? data : [data];
-  //   }))
-  // }
+
+
 
 
 

@@ -28,8 +28,15 @@ export default class CustomerService{
   deleteCustomer(customerId:number){
     return this.http.delete("http://localhost:8080/customer/delete/"+customerId);
     }
+
+  searchCustomer(customerName:string):Observable<Customer>{
+      return this.http.get<Customer>("http://localhost:8080/customer/search/"+customerName);
+  }
+
+  updateCustomer(customer:Customer){
+    return this.http.put("http://localhost:8080/customer/update",customer);
   }
 
 
-
+  }
 

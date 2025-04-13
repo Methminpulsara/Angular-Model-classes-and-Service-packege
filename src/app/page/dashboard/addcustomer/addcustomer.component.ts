@@ -21,7 +21,7 @@ export class AddcustomerComponent {
 
   public id : String=";"
 
-  constructor(private http:HttpClient , private customerservice:CustomerService){}
+  constructor( private customerservice:CustomerService){}
 
   addCustomer(){
 
